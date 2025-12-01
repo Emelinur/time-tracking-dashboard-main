@@ -1,0 +1,38 @@
+:root{
+  /* Colors */
+  --white:hsl(0, 100%, 100%);
+  --black:hsl(0, 0%, 0%);
+  --navy_950:hsl(226, 43%, 10%);
+  --navy_900:hsl(235, 46%, 20%);
+  --navy_800:hsl(235, 41%, 34%);
+  --navy_200:hsl(236, 100%, 87%);
+  --orange_300:hsl(15, 100%, 70%);
+  --purple_700:hsl(264, 64%, 52%);
+  --purple_600:hsl(246, 80%, 60%);
+  --purple_500:hsl(235, 45%, 61%);
+  --blue_300:hsl(195, 74%, 62%);
+  --pink_400:hsl(348, 100%, 68%);
+  --green_400:hsl(145, 58%, 55%);
+  --yellow_300:hsl(43, 84%, 65%);
+  --grey_200:hsl(0, 0%, 85%);
+
+  /* Typography */
+  --ff:"Rubik", sans-serif;
+
+  /* Text Preset 1  Rubik Light*/
+  --fs_1:56px;
+  --lh_1:66px;
+  --ls:0px;
+
+  /* Text Preset 2 Rubik Light */
+  --fs_2:40px;
+  --lh_2:47px;
+  
+   /* Text Preset 3 Rubik Light */
+   --fs_3:32px;
+  --lh_3:38px;
+
+  /* Text Preset 4 */
+
+
+} 
