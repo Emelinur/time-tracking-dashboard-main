@@ -32,7 +32,104 @@
    --fs_3:32px;
   --lh_3:38px;
 
-  /* Text Preset 4 */
+  /* Text Preset 4 Rubik Light*/
+ --fs_4:24px;
+ --lh_4:28px;
 
+   /* Text Preset 5  Rubik Medium*/
+ --fs_5:18px;
+ --lh_5:21px;
 
+    /* Text Preset 5 Rubik Regular*/
+ --fs_5:18px;
+ --lh_5:21px;
+
+   /* Text Preset 6 Rubik Regular*/
+ --fs_6:15px;
+ --lh_6:18px;
+
+--fw_300:300;
+--fw_400:400;
+--fw-500:500;
+
+ /* Spacing */
+ --spacing-0:0px;
+ --spacing-100:8px;
+ --spacing-200:16px;
+ --spacing-300:24px;
+ --spacing-400:32px;
+ --spacing-500:40px;
 } 
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--navy_950);
+  display: flex;
+    justify-content: center;
+   align-items: center;
+   height: 100svh;
+   font-family: var(--ff);
+
+}
+.dashboard_grid{
+  width: 1116px;
+  height: 520px;
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-template-areas:" profile  work     play   study"
+           "profile  exercise social self-care";
+  gap: var(--spacing-400);
+}
+.card-profile{
+  grid-area: profile;
+ background-color: var(--navy_900);
+ border-radius: 15px;
+}
+.card-header {
+  height: 354px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--purple_600);
+   padding: var(--spacing-400);
+   border-radius: 15px;
+   gap:var(--spacing-500);
+   
+}
+.card-header img{
+  width: 78px;
+  height: 78px;
+  border: 3px solid var(--white);
+  border-radius: 100%;
+}
+.card-subtitle{
+  font-size: var(--fs_6);
+  line-height: var(--lh_6);
+  color: var(--navy_200);
+  font-weight: var(--fw_300);
+}
+.dashboard_name{
+  font-size: var(--fs_2);
+  line-height: var(--lh_2);
+  color: var(--white);
+   font-weight: var(--fw_300);
+}
+.card-nav{
+  display: inline-flex;
+  flex-direction: column;
+  background-color: var(--navy_900);
+padding: var(--spacing-400);
+  gap:20px;
+}
+.card-link{
+border: 0;
+ background-color: var(--navy_900);
+    font-size: var(--fs_5);
+  line-height: var(--lh_5);
+  color: var(--purple_500);
+}
