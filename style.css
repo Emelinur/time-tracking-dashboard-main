@@ -122,14 +122,30 @@ grid-template-areas:" profile  work     play   study"
 .card-nav{
   display: inline-flex;
   flex-direction: column;
+  align-items:start ;
   background-color: var(--navy_900);
-padding: var(--spacing-400);
-  gap:20px;
+  margin: var(--spacing-400);
+  gap:21px;
 }
 .card-link{
 border: 0;
  background-color: var(--navy_900);
-    font-size: var(--fs_5);
+  font-size: var(--fs_5);
   line-height: var(--lh_5);
   color: var(--purple_500);
+}
+.card-link:hover{
+  cursor: pointer;
+  color: var(--white);
+}
+.card-work{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-area: work;
+  background-color: var(--orange_300);
+
+}
+.card-work img{
+
 }
