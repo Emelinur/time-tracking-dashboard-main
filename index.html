@@ -1,125 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
 
-    <title>Frontend Mentor | Time tracking dashboard</title>
-  </head>
-  <body>
-    <main>
-      <section class="dashboard_grid">
-        <article class="card-profile">
-          <div class="card-header">
-            <img
-              src="images/image-jeremy.png"
-              alt="profile-img"
-              class="card-img"
-            />
-            <div class="card-user-info">
-              <p class="card-subtitle">Report for</p>
-              <h1 class="dashboard_name">Jeremy Robson</h1>
-            </div>
+<body>
+
+  <main>
+    <section class="dashboard_grid">
+      <article class="card-profile">
+        <div class="card-header">
+          <img src="images/image-jeremy.png" alt="profile-img"/>
+          <div class="card-user-info">
+            <p class="card-subtitle">Report for</p>
+            <h1 class="dashboard_name">Jeremy Robson</h1>
           </div>
-          <div class="card-nav">
-            <button class="card-link" type="button" >Daily</button>
-            <button class="card-link card-active"  type="button">Weekly</button>
-            <button class="card-link"  type="button">Monthly</button>
+        </div>
+        <div class="card-nav">
+          <button class="card-link daily" type="button">Daily</button>
+          <button class="card-link card-active weekly" type="button">Weekly</button>
+          <button class="card-link monthly" type="button" >Monthly</button>
+        </div>
+      </article>
+      <article class="card card-work">
+        <div class="card-content">
+          <div class="card-title-row">
+            <h2>Work</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" />
+            </svg>
           </div>
-        </article>
-        <article class="card-work">
-          <div class="card-content">
-            <div class="card-title-row">
-              <h2>Work</h2>
-           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
-            </div>
-            <div class="card__stats-row">
-              <p class="card__hours">32hrs</p>
-              <p class="card__prev">Last Week - 36hrs</p>
-            </div>
+          <div class="card-stats-row">
+            <p class="card-hours">32hrs</p>
+            <p class="card-prev">Last Week - 36hrs</p>
           </div>
-        </article>
-        <article class="card--play">
-      <div class="card__content">
-        <div class="card__title-row">
-          <h2>Play</h2>
-          <img src="./images/icon-ellipsis.svg" alt="More">
         </div>
-        <div class="card__stats-row">
-          <p class="card__hours">10hrs</p>
-          <p class="card__prev">Last Week - 8hrs</p>
+      </article>
+      <article class="card card-play">
+        <div class="card-content">
+          <div class="card-title-row">
+            <h2>Play</h2>
+            <img src="./images/icon-ellipsis.svg" alt="More">
+          </div>
+          <div class="card-stats-row">
+            <p class="card-hours">10hrs</p>
+            <p class="card-prev">Last Week - 8hrs</p>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="card--study">
-      <div class="card__content">
-        <div class="card__title-row">
-          <h2>Study</h2>
-          <img src="./images/icon-ellipsis.svg" alt="More">
+      <article class="card card-study">
+        <div class="card-content">
+          <div class="card-title-row">
+            <h2>Study</h2>
+            <img src="./images/icon-ellipsis.svg" alt="More">
+          </div>
+          <div class="card-stats-row">
+            <p class="card-hours">4hrs</p>
+            <p class="card-prev">Last Week - 7hrs</p>
+          </div>
         </div>
-        <div class="card__stats-row">
-          <p class="card__hours">4hrs</p>
-          <p class="card__prev">Last Week - 7hrs</p>
-        </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="card--exercise">
-      <div class="card__content">
-        <div class="card__title-row">
-          <h2>Exercise</h2>
-          <img src="./images/icon-ellipsis.svg" alt="More">
+      <article class="card card-exercise">
+        <div class="card-content">
+          <div class="card-title-row">
+            <h2>Exercise</h2>
+            <img src="./images/icon-ellipsis.svg" alt="More">
+          </div>
+          <div class="card-stats-row">
+            <p class="card-hours">4hrs</p>
+            <p class="card-prev">Last Week - 5hrs</p>
+          </div>
         </div>
-        <div class="card__stats-row">
-          <p class="card__hours">4hrs</p>
-          <p class="card__prev">Last Week - 5hrs</p>
-        </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="card--social">
-      <div class="card__content">
-        <div class="card__title-row">
-          <h2>Social</h2>
-          <img src="./images/icon-ellipsis.svg" alt="More">
+      <article class="card card-social">
+        <div class="card-content">
+          <div class="card-title-row">
+            <h2>Social</h2>
+            <img src="./images/icon-ellipsis.svg" alt="More">
+          </div>
+          <div class="card-stats-row">
+            <p class="card-hours">5hrs</p>
+            <p class="card-prev">Last Week - 10hrs</p>
+          </div>
         </div>
-        <div class="card__stats-row">
-          <p class="card__hours">5hrs</p>
-          <p class="card__prev">Last Week - 10hrs</p>
-        </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="card--self-care">
-      <div class="card__content">
-        <div class="card__title-row">
-          <h2>Self Care</h2>
-          <img src="./images/icon-ellipsis.svg" alt="More">
+      <article class="card card-self-care">
+        <div class="card-content">
+          <div class="card-title-row">
+            <h2>Self Care</h2>
+            <img src="./images/icon-ellipsis.svg" alt="More">
+          </div>
+          <div class="card-stats-row">
+            <p class="card-hours">2hrs</p>
+            <p class="card-prev">Last Week - 2hrs</p>
+          </div>
         </div>
-        <div class="card__stats-row">
-          <p class="card__hours">2hrs</p>
-          <p class="card__prev">Last Week - 2hrs</p>
-        </div>
-      </div>
-      </section>
-    </main>
+    </section>
+  </main>
+<script src="main.js"></script>
+</body>
 
-   
-  </body>
 </html>

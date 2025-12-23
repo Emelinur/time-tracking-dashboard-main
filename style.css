@@ -1,165 +1,340 @@
-:root{
+:root {
   /* Colors */
-  --white:hsl(0, 100%, 100%);
-  --black:hsl(0, 0%, 0%);
-  --navy_950:hsl(226, 43%, 10%);
-  --navy_900:hsl(235, 46%, 20%);
-  --navy_800:hsl(235, 41%, 34%);
-  --navy_200:hsl(236, 100%, 87%);
-  --orange_300:hsl(15, 100%, 70%);
-  --purple_700:hsl(264, 64%, 52%);
-  --purple_600:hsl(246, 80%, 60%);
-  --purple_500:hsl(235, 45%, 61%);
-  --blue_300:hsl(195, 74%, 62%);
-  --pink_400:hsl(348, 100%, 68%);
-  --green_400:hsl(145, 58%, 55%);
-  --yellow_300:hsl(43, 84%, 65%);
-  --grey_200:hsl(0, 0%, 85%);
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --navy_950: hsl(226, 43%, 10%);
+  --navy_900: hsl(235, 46%, 20%);
+  --navy_800: hsl(235, 41%, 34%);
+  --navy_200: hsl(236, 100%, 87%);
+  --orange_300: hsl(15, 100%, 70%);
+  --purple_700: hsl(264, 64%, 52%);
+  --purple_600: hsl(246, 80%, 60%);
+  --purple_500: hsl(235, 45%, 61%);
+  --blue_300: hsl(195, 74%, 62%);
+  --pink_400: hsl(348, 100%, 68%);
+  --green_400: hsl(145, 58%, 55%);
+  --yellow_300: hsl(43, 84%, 65%);
+  --grey_200: hsl(0, 0%, 85%);
 
   /* Typography */
-  --ff:"Rubik", sans-serif;
+  --ff: "Rubik", sans-serif;
 
   /* Text Preset 1  Rubik Light*/
-  --fs_1:56px;
-  --lh_1:66px;
-  --ls:0px;
+  --fs_1: 56px;
+  --lh_1: 66px;
+  --ls: 0px;
 
   /* Text Preset 2 Rubik Light */
-  --fs_2:40px;
-  --lh_2:47px;
-  
-   /* Text Preset 3 Rubik Light */
-   --fs_3:32px;
-  --lh_3:38px;
+  --fs_2: 40px;
+  --lh_2: 47px;
+
+  /* Text Preset 3 Rubik Light */
+  --fs_3: 32px;
+  --lh_3: 38px;
 
   /* Text Preset 4 Rubik Light*/
- --fs_4:24px;
- --lh_4:28px;
+  --fs_4: 24px;
+  --lh_4: 28px;
 
-   /* Text Preset 5  Rubik Medium*/
- --fs_5:18px;
- --lh_5:21px;
+  /* Text Preset 5  Rubik Medium*/
+  --fs_5: 18px;
+  --lh_5: 21px;
 
-    /* Text Preset 5 Rubik Regular*/
- --fs_5:18px;
- --lh_5:21px;
+  /* Text Preset 5 Rubik Regular*/
+  --fs_5: 18px;
+  --lh_5: 21px;
 
-   /* Text Preset 6 Rubik Regular*/
- --fs_6:15px;
- --lh_6:18px;
+  /* Text Preset 6 Rubik Regular*/
+  --fs_6: 15px;
+  --lh_6: 18px;
 
---fw_300:300;
---fw_400:400;
---fw-500:500;
+  --fw_300: 300;
+  --fw_400: 400;
+  --fw-500: 500;
 
- /* Spacing */
- --spacing-0:0px;
- --spacing-100:8px;
- --spacing-200:16px;
- --spacing-300:24px;
- --spacing-400:32px;
- --spacing-500:40px;
-} 
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+}
 
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-body{
+
+body {
   background-color: var(--navy_950);
   display: flex;
-    justify-content: center;
-   align-items: center;
-   height: 100svh;
-   font-family: var(--ff);
-
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  font-family: var(--ff);
 }
-.dashboard_grid{
-  width: 1116px;
+
+.dashboard_grid {
+max-width: 100%;
+  max-width: 1116px;
   height: 520px;
-  background-color: aliceblue;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-template-areas:" profile  work     play   study"
-           "profile  exercise social self-care";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    " profile  work     play   study"
+    "profile  exercise social self-care";
   gap: var(--spacing-400);
 }
-.card-profile{
+
+.card-profile {
   grid-area: profile;
- background-color: var(--navy_900);
- border-radius: 15px;
+  background-color: var(--navy_900);
+  border-radius: 15px;
 }
+
 .card-header {
-  height: 354px;
   display: flex;
   flex-direction: column;
   background-color: var(--purple_600);
-   padding: var(--spacing-400);
-   border-radius: 15px;
-   gap:var(--spacing-500);
-   
+  padding: var(--spacing-400);
+  border-radius: 15px;
+  gap: var(--spacing-500);
 }
-.card-header img{
+
+.card-header img {
   width: 78px;
   height: 78px;
   border: 3px solid var(--white);
   border-radius: 100%;
 }
-.card-subtitle{
+
+.card-subtitle {
   font-size: var(--fs_6);
   line-height: var(--lh_6);
   color: var(--navy_200);
   font-weight: var(--fw_300);
 }
-.dashboard_name{
+
+.dashboard_name {
   font-size: var(--fs_2);
   line-height: var(--lh_2);
   color: var(--white);
-   font-weight: var(--fw_300);
+  font-weight: var(--fw_300);
 }
-.card-nav{
+
+.card-nav {
   display: inline-flex;
   flex-direction: column;
-  align-items:start ;
+  align-items: start;
   background-color: var(--navy_900);
   margin: var(--spacing-400);
-  gap:21px;
+  gap: 21px;
 }
-.card-link{
-border: 0;
- background-color: var(--navy_900);
+
+.card-link {
+  border: 0;
+  background-color: var(--navy_900);
   font-size: var(--fs_5);
   line-height: var(--lh_5);
   color: var(--purple_500);
+  font-weight: var(--fw_400);
 }
-.card-link:hover{
+
+.card-link:hover {
   cursor: pointer;
   color: var(--white);
 }
-.card-work{
+
+.card {
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   border-radius: 15px;
-  background-image: url(images/icon-work.svg);
-  grid-area: work;
-  background-color: var(--orange_300);
-background-repeat: no-repeat;
-background-position: top -10px right 20px;;
+  background-repeat: no-repeat;
+  background-position: top -5px right 20px;
 }
-.card-content{
+
+.card-content {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: var(--navy_900);
   padding: var(--spacing-400);
+  gap: var(--spacing-300);
 }
-.card-title-row{
-    display: flex;
+
+.card-title-row {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: var(--white);
+}
+
+h2 {
+  font-size: var(--fs_5);
+  line-height: var(--lh_5);
+  color: var(--white);
+  font-weight: var(--fw_400);
+}
+
+.card-stats-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+
+.card-hours {
+  font-size: var(--fs_1);
+  line-height: var(--lh_1);
+  color: var(--white);
+  font-weight: var(--fw_300);
+}
+
+.card-prev {
+  font-size: var(--fs_6);
+  line-height: var(--lh_6);
+  color: var(--navy_200);
+  font-weight: var(--fw_300);
+}
+
+.card-work {
+  background-image: url(images/icon-work.svg);
+  grid-area: work;
+  background-color: var(--orange_300);
+}
+
+.card-play {
+  background-image: url(images/icon-play.svg);
+  grid-area: play;
+  background-color: var(--blue_300);
+}
+
+.card-study {
+  background-image: url(images/icon-study.svg);
+  grid-area: study;
+  background-color: var(--pink_400);
+}
+
+.card-exercise {
+  background-image: url(images/icon-exercise.svg);
+  grid-area: exercise;
+  background-color: var(--green_400);
+}
+
+.card-social {
+  background-image: url(images/icon-social.svg);
+  grid-area: social;
+  background-color: var(--purple_700);
+}
+
+.card-self-care {
+  background-image: url(images/icon-self-care.svg);
+  grid-area: self-care;
+  background-color: var(--yellow_300);
+}
+
+@media (max-width:1144px) {
+  .dashboard_grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      " profile   profile  profile"
+      " work      play     study"
+      " exercise  social   self-care";
+    margin: 20px;
+    width: 100%;
+    max-width: 700px;
+    height: 677px;
+    gap: var(--spacing-300);
+  }
+
+  .card-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-300);
+  }
+
+  .card-header img {
+    width: 64px;
+    height: 64px;
+
+  }
+
+  .card-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+  }
+
+  .dashboard_name {
+    font-size: var(--fs_4);
+    line-height: var(--lh_4);
+  }
+
+  .card-nav {
+    display: flex;
+    ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: var(--spacing-300);
+  }
+
+  .card-content {
+    padding: var(--spacing-300);
+    gap: var(--spacing-200);
+  }
+
+}
+
+@media (max-width:768px) {
+  body {
+    display: block;
+    padding: 20px 0;
+    height: auto;
+  }
+
+  .dashboard_grid {
+    width: 100%;
+    margin: 0 auto;
+    height: 1307px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      " profile "
+      "work "
+      "play "
+      "study "
+      "exercise "
+      "social "
+      "self-care ";
+    gap: var(--spacing-300);
+    padding: var(--spacing-300);
+  }
+
+  .card-header {
+    gap: var(--spacing-300);
+  }
+
+  .card-nav {
+    justify-content: space-between;
+  }
+
+  .card-stats-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-hours {
+    font-size: var(--fs_3);
+    line-height: var(--lh_3);
+  }
 }
