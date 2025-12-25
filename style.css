@@ -125,7 +125,7 @@ max-width: 100%;
   font-weight: var(--fw_300);
 }
 
-.card-nav {
+.lower-card {
   display: inline-flex;
   flex-direction: column;
   align-items: start;
@@ -277,7 +277,7 @@ h2 {
     line-height: var(--lh_4);
   }
 
-  .card-nav {
+  .lower-card {
     display: flex;
     ;
     flex-direction: row;
@@ -321,7 +321,7 @@ h2 {
     gap: var(--spacing-300);
   }
 
-  .card-nav {
+  .lower-card {
     justify-content: space-between;
   }
 

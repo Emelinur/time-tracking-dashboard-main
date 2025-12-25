@@ -39,8 +39,8 @@ _(Don't forget to replace these paths with your actual project screenshots)_
 
 ### Links
 
-- Solution URL: [Add your solution URL here](https://www.frontendmentor.io/solutions/YOUR-SOLUTION-LINK)
-- Live Site URL: [Add your live site URL here](https://your-username.github.io/time-tracking-dashboard/)
+- Solution URL: [Add your solution URL here](https://www.frontendmentor.io/profile/Emelinur/solutions)
+- Live Site URL: [Add your live site URL here](https://emelinur.github.io/time-tracking-dashboard-main/)
 
 ## My process
 
@@ -52,7 +52,7 @@ _(Don't forget to replace these paths with your actual project screenshots)_
 - Mobile-first workflow
 - **Vanilla JavaScript**
 - **Fetch API & JSON**
-
+- Accessibility (a11y) & ARIA Attributes
 ### What I learned
 
 This project was a deep dive into handling data asynchronously and manipulating the DOM dynamically. Here are my main takeaways:
@@ -67,3 +67,8 @@ fetch('./data.json')
     // Handling the data here
     updateDashboard(data);
   });
+  ```
+#### 2. Accessibility (a11y) & ARIA Attributes
+I learned that writing functional code means writing code that works for everyone, including screen reader users.
+- **Semantic HTML:** I replaced generic `div` or `img` tags with interactive `<button>` elements to ensure keyboard accessibility (Tab key navigation).
+- **State Management with ARIA:** I realized that CSS classes like `.active` are only visual. To make the UI truly functional, I implemented `role="radiogroup"` and dynamically updated the `aria-checked` attribute using JavaScript. This ensures assistive technologies know exactly which timeframe is currently selected.

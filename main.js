@@ -38,19 +38,24 @@ data.forEach(item => {
 }
 
 
-allButtons.forEach(button =>{
-  button.addEventListener("click",()=>{
-    allButtons.forEach(btn => btn.classList.remove('card-active'));
-    button.classList.add('card-active');
-    if(button.classList.contains("daily")){
-      updateCards(jsonData,"daily")
-    }else if(button.classList.contains("weekly")){
-      updateCards(jsonData,"weekly")
-    
-    }else{
-      updateCards(jsonData, 'monthly');
-    }
-  })
+allButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        allButtons.forEach(btn => {
+            btn.classList.remove('card-active');
+            btn.setAttribute('aria-checked', 'false');
+        });
+
+        button.classList.add('card-active');
+        button.setAttribute('aria-checked', 'true');
+        
+        if (button.classList.contains("daily")) {
+            updateCards(jsonData, "daily")
+        } else if (button.classList.contains("weekly")) {
+            updateCards(jsonData, "weekly")
+        } else {
+            updateCards(jsonData, 'monthly');
+        }
+    })
 })
 
 getData();
