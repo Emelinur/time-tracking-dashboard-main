@@ -1,27 +1,56 @@
-const cardDaily=document.querySelector(".daily");
-const cardWeekly=document.querySelector(".weekly");
-const cardMonthly=document.querySelector(".monthly");
-const allButtons=document.querySelector(".card-link");
+const allButtons=document.querySelectorAll(".card-link");
 
-cardWeekly.addEventListener("click",()=>{
-  console.log("click")
-})
-
-cardMonthly.addEventListener("click",()=>{
-  console.log("click")
-})
 let jsonData=[];
+
 async function getData() {
   try{
     const response=await fetch("./data.json");
     if (!response.ok) {
       throw new Error('Failed to load data, status:' + response.status);
     }
-    jsonData=await response.json()
-
+    jsonData=await response.json();
+console.log(jsonData)
+updateCards(jsonData);
   }catch{
-    console.error("Something went wrong:",error)
+    error => console.log(error)
   }
   
 }
 
+
+function updateCards(data, howTime){
+  const periodText = {
+    daily: "Yesterday",
+    weekly: "Last Week",
+    monthly: "Last Month"
+  };
+data.forEach(item => {
+  const smallTitle=item.title.toLowerCase().replace(" ","-");
+  const timeBox=document.querySelector(`.card-${smallTitle} .card-hours`);
+  const lastBox=document.querySelector(`.card-${smallTitle} .card-prev`);
+
+  const currentHours=item.timeframes[howTime].current;
+  const previousHours=item.timeframes[howTime].previous;
+
+  timeBox.innerHTML=`${currentHours} hrs`;
+ lastBox.innerHTML = `${periodText[howTime]} - ${previousHours}hrs`;
+});
+}
+
+
+allButtons.forEach(button =>{
+  button.addEventListener("click",()=>{
+    allButtons.forEach(btn => btn.classList.remove('card-active'));
+    button.classList.add('card-active');
+    if(button.classList.contains("daily")){
+      updateCards(jsonData,"daily")
+    }else if(button.classList.contains("weekly")){
+      updateCards(jsonData,"weekly")
+    
+    }else{
+      updateCards(jsonData, 'monthly');
+    }
+  })
+})
+
+getData();
