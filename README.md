@@ -33,8 +33,6 @@ Users should be able to:
 | ------------------------------ | -------------------- | ---------------------- |
 | ![Desktop](./images/desktop.png) | ![Mobile](./images/mobile.png) | ![Tablet](./images/tablet.png) |
 
-_(Don't forget to replace these paths with your actual project screenshots)_
-
 ---
 
 ### Links
